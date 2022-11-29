@@ -161,5 +161,7 @@
   "MANAGEMENT": "Gestión",
   "DATA_": "Datos",
   "LAST_MOVEMENT": "Último movimiento",
-  "MOVEMENT_TYPE": "Tipo de movimiento"
+  "MOVEMENT_TYPE": "Tipo de movimiento",
+  "PROOF": "Prueba",
+  "PROOF_CONTENT": "Prueba Tooltip"
 }

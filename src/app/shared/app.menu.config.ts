@@ -45,6 +45,15 @@ export const MENU_CONFIG: MenuRootItem[] = [
         icon: 'person',
         image: 'assets/images/ic_empleados.png',
         component: EmployeesCardComponent
+      },
+      {
+        id: 'proofs',
+        name: 'PROOF',
+        tooltip: 'PROOF_CONTENT',
+        route: '/main/proof',
+        icon: 'person',
+        image: 'assets/images/ic_empleados.png',
+        //component: EmployeesCardComponent
       }
     ]
   },
