@@ -1,4 +1,5 @@
 import { Injector, ViewChild, Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
 import { OFormComponent, OntimizeService, OListPickerComponent, OTableComponent, ORealPipe, ONIFInputComponent } from 'ontimize-web-ngx';
 import { OReportStoreService } from 'ontimize-web-ngx-report';
 
@@ -32,7 +33,8 @@ export class CustomersDetailComponent implements OnInit {
   availableAccountsToAdd: Array<any> = [];
 
   constructor(protected injector: Injector,
-    private reportStoreService: OReportStoreService) {
+    private reportStoreService: OReportStoreService,
+    protected router: Router) {
     this.service = this.injector.get(OntimizeService);
     this.realPipe = new ORealPipe(this.injector);
   }
@@ -109,6 +111,16 @@ export class CustomersDetailComponent implements OnInit {
 
   fillReport(e: Event) {
     this.reportStoreService.openFillReport("6e1439f4-9b76-4d2d-ae73-6797682078c9", this.params, {});
+  }
+
+  onButtonClick() {
+    this.router.navigate(['/main/about']);
+  }
+
+  onDateChange(evt: number) {
+    /*
+      do whatever you want
+    */
   }
 
 }
